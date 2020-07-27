@@ -1,7 +1,7 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
-const path = require('path');
+// const path = require('path');
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -20,7 +20,7 @@ module.exports = appInfo => {
 
   // 静态资源放置位置
   config.view = {
-    root: path.join(appInfo.baseDir, 'app/view'),
+    defaultViewEngine: 'nunjucks',
   };
 
   config.security = {

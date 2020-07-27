@@ -17,7 +17,7 @@ class ImageController extends Controller {
       console.log('图片写入成功');
       ctx.body = {
         message: '图片写入成功',
-        url: `http://127.0.0.1:7001/public/${name}`
+        url: `http://127.0.0.1:7001/public/${name}`,
       };
       ctx.status = 200;
     } catch (e) {

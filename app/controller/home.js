@@ -8,7 +8,20 @@ class HomeController extends Controller {
   async index() {
     const { ctx } = this;
     console.log('123');
-    ctx.body = 'hi, egg';
+    // ctx.body = 'hi, egg';
+    const data = {
+      left: 'left!!!!!!!!!!!!!!!!!',
+      right: 'right~~~~',
+      name: 'vajra',
+      hi: 1,
+    };
+    const html = await ctx.renderView('home.nj', data);
+    // const html = await ctx.renderString('hi, {{ name }}', data, {
+    //   viewEngine: 'nunjucks',
+    // });
+    console.log('html: ', html);
+    ctx.body = html;
+
   }
   async logo() {
     const { ctx } = this;
